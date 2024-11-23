@@ -1,0 +1,89 @@
+/* General styling for the calculator container */
+.calculator {
+    width: 320px;
+    margin: 50px auto;
+    border: 2px solid #444;
+    border-radius: 12px;
+    background-color: #f3f3f3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Display input styling */
+#display {
+    width: 100%;
+    height: 70px;
+    border: none;
+    background: #222;
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-bottom: 2px solid #444;
+}
+
+/* Keys container styling */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background: #e0e0e0;
+}
+
+/* Button styling */
+button {
+    height: 65px;
+    border: none;
+    border-radius: 8px;
+    background-color: #888;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+button:active {
+    background-color: #555;
+    transform: scale(0.95);
+}
+
+/* Styling specific buttons */
+button:nth-child(4n) {
+    background-color: #f57c00; /* Operator buttons */
+}
+
+button:nth-child(4n):hover {
+    background-color: #e65100;
+}
+
+button:nth-last-child(-n+2) {
+    background-color: #c62828; /* Clear and equals */
+}
+
+button:nth-last-child(-n+2):hover {
+    background-color: #b71c1c;
+}
+
+/* Adjust the layout of the "c" and "=" buttons */
+button:nth-last-child(2) {
+    grid-column: span 2; /* Span two columns for "c" */
+    background-color: #d32f2f;
+}
+
+button:nth-last-child(1) {
+    grid-column: span 2; /* Span two columns for "=" */
+    background-color: #388e3c;
+}
+
+button:nth-last-child(1):hover {
+    background-color: #2e7d32;
+}
+
